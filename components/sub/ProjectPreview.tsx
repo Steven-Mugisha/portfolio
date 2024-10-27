@@ -87,7 +87,7 @@ function ProjectReview({
               src={imageUrl}
               alt={alt}
               className="object-cover aspect-[4/3] rounded-lg sm:group-hover:scale-105 transition ease-in-out duration-500"
-              style={{ filter: 'grayscale(100%) brightness(40%)' }}
+              style={{ filter: 'grayscale(100%) brightness(60%)' }}
             />
           </div>
         </div>

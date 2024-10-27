@@ -2,6 +2,7 @@ import adc from "../public/adc.png";
 import uog from "../public/uog.png";
 
 import w3s from "../public/w3s.png";
+import said from "../public/said.png";
 
 export const experienceData = [
   {
@@ -31,6 +32,18 @@ export const experienceData = [
 ] as const;
 
 export const projectsData = [
+  {
+    title: "SAIDIFY",
+    description:
+      "Helped to build an NPM library to generate SAIDs—a cryptographic digest of a given set of data that is embedded within the data it summarizes",
+    tags: ["Typescript", "Node.js", "NPM"],
+    imageUrl: said,
+    link: "https://www.npmjs.com/package/saidify",
+    isLink: true,
+    alt: "SAID Project Image",
+    achievement: "",
+    hasAchievement: true,
+  },
   {
     title: "W3S",
     description:

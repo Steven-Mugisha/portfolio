@@ -99,7 +99,7 @@
 .work-content_container {
   display: grid;
   grid-template-columns: auto 1fr;
-  align-items: start;
+  align-items: center;
   gap: 0.1rem;
   transition: all 0.5s ease-in-out; /* transition-all ease-in-out duration-500 */
   cursor: pointer;

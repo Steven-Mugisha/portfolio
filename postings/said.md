@@ -7,8 +7,10 @@ keywords: ["CESR", "SAID", "Rust"]
 
 <br>
 
-A `said` (Self-Addressing Identifier) - a special type of content-addressable identifier based on encoded cryptographic digest that is self-referential.
+ <!-- A `said` (Self-Addressing Identifier) - a special type of content-addressable identifier based on encoded cryptographic digest that is self-referential. -->
 
+
+<!--
 - SAIDs facilitates immutably referenced data serialization for applications such as [Verifiable Credentials](https://en.wikipedia.org/wiki/Verifiable_credentials) or [Ricardian Contracts](https://en.wikipedia.org/wiki/Ricardian_contract).
 
 ### `said` [Generation and Verification Protocols](https://www.ietf.org/archive/id/draft-ssmith-said-03.html#section-2.3)
@@ -546,4 +548,4 @@ gen.into()
 
 1. https://www.ietf.org/archive/id/draft-ssmith-said-03.html#name-appendix-embedding-saids-in
 2. https://github.com/THCLab/cesrox/tree/master/said
-3. https://snyk.io/advisor/npm-package/self-addressing-identifier
+3. https://snyk.io/advisor/npm-package/self-addressing-identifier -->

@@ -29,12 +29,12 @@ const Footer = () => {
           </a>{" "}
           <span className="mx-1 font-bold text-md">|</span> Deployed with{" "}
           <a
-            href="https://vercel.com/"
+            href="https://developers.cloudflare.com/pages/framework-guides/nextjs/"
             className="font-medium text-gray-300"
             target="_blank"
             rel="noreferrer noopener"
           >
-            Vercel
+            Cloudflare
           </a>
         </div>
       </div>
