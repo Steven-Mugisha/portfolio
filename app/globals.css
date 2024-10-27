@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.cdnfonts.com/css/general-sans");
+
+:root {
+  color-scheme: dark;
+}
+
+/* mouse */
+.mousefollow {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  height: 45vmax;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  filter: blur(3vmax);
+  /* filter: blur(0vmax); */
+  /* background: radial-gradient(#7a92f0, #030014); */
+  /* background: radial-gradient(#4343ff, #030014); */
+  background: #eaeaece2;
+  opacity: 0.08;
+  z-index: -20;
+
+  transition: transform 300ms cubic-bezier(0.12, 0.6, 0.83, 0.65);
+}
+
+.mousefollowmobile {
+  position: fixed;
+  height: 35vmax;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  filter: blur(3vmax);
+  /* filter: blur(0vmax); */
+  /* background: radial-gradient(#7a92f0, #030014); */
+  /* background: radial-gradient(#4343ff, #030014); */
+  background: #eaeaece2;
+  opacity: 0.08;
+  z-index: -20;
+
+  transition: transform 300ms cubic-bezier(0.17, 0.67, 0.83, 0.67);
+}
+
+/* navigation */
+.nav ul li span.indicator {
+  background-color: #00000000;
+}
+
+.nav ul li.active {
+  color: #af8d19;
+}
+
+.nav ul li.active span.indicator {
+  background-color: #00000000;
+  width: 24px;
+}
+
+.mover {
+  position: absolute;
+  top: 30px;
+  width: 72px;
+  height: 2px;
+  background: #af8d19;
+  border-radius: 10px;
+
+  border: 6px solid var(--clr);
+  transition: 0.5s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav ul li:nth-child(1).active ~ .mover {
+  transform: translateX(0);
+  width: 88px;
+}
+
+.nav ul li:nth-child(2).active ~ .mover {
+  transform: translateX(128px);
+  width: 72px;
+}
+
+.nav ul li:nth-child(3).active ~ .mover {
+  transform: translateX(242px);
+  width: 57px;
+}
+/* 
+.nav ul li:nth-child(3).active ~ .mover {
+    transform: translateY(calc(50px * 2));
+} */
+
+/* work experience */
+/* .work-content {
+  grid-column: span 2 / span 2;
+  border-radius: 0.6rem;
+  background-color: #292929;
+  border: 1px solid #f84193;
+} */
+
+.work-content_container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  gap: 0.1rem;
+  transition: all 0.5s ease-in-out; /* transition-all ease-in-out duration-500 */
+  cursor: pointer;
+  border-radius: 0.7rem;
+  padding: 0.5rem;
+}
+
+.work-content_container:hover {
+  background-color: #b9b9ba1c;
+}
+
+@media (min-width: 700px) {
+  .work-content_container {
+    /* padding: 0.5rem; */
+    padding-left: 1rem;
+  }
+}
+
+.work-content_logo {
+  border-radius: 1.5rem;
+  width: 4rem;
+  height: 4rem;
+  padding: 0.5rem;
+  background-color: #e1e6e700;
+}
