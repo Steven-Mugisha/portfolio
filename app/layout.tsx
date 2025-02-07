@@ -6,9 +6,37 @@ import "./globals.css";
 const rubik = Rubik({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Steven Mugisha",
-  description: "Software Developer @University of Guelph",
-  keywords: [],
+  title: "Steven Mugisha Mizero - Software Engineer Portfolio",
+  description:
+    "Welcome to the world of Steven Mugisha Mizero, a Software Engineer at the University of Guelph. Discover projects, skills, and professional experience.",
+  keywords: [
+    "Steven Mugisha Mizero",
+    "Software Engineer",
+    "University of Guelph",
+    "Portfolio",
+    "Full Stack Developer",
+    "Software Engineering",
+    "Machine Learning",
+    "Generative AI",
+    "LLM",
+    "Geospatial Software Engineer",
+    "GIS Analyst",
+  ],
+  authors: [{ name: "Steven Mugisha Mizero" }],
+  viewport: "width=device-width, initial-scale=1.0",
+  robots: "index, follow",
+  openGraph: {
+    title: "Steven Mugisha Mizero - Software Engineer Portfolio",
+    description:
+      "Welcome to the world of Steven Mugisha Mizero, a Software Engineer at the University of Guelph. Discover projects, skills, and professional experience.",
+    type: "website",
+    url: "https://www.stevenmugisha.com",
+    images: [
+      {
+        url: "./favicon.ico",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -23,7 +51,7 @@ export default function RootLayout({
       >
         <div>
           {children}
-          <div className="mousefollowmobile md:hidden absolute bottom-0 -right-16"></div>
+          {/* <div className="mousefollowmobile md:hidden absolute bottom-0 -right-16"></div> */}
           <MouseFollow />
         </div>
       </body>

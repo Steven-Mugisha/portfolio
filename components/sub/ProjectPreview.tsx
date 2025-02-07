@@ -51,7 +51,7 @@ function ProjectReview({
         rel="noreferrer noopener"
         className="group"
       >
-        <div className="h-full rounded-xl relative flex flex-col-reverse sm:flex-row group">
+        <div className="h-full w-full rounded-xl relative flex flex-col-reverse sm:flex-row group -py-2 -mt-2">
           <div className="pt-4 pb-7 px-5 sm:w-[50%] sm:px-0 sm:py-0 sm:my-auto sm:flex sm:flex-col group">
             <div className="flex text-lg text-gray-200 font-semibold group">
               <div className="sm:group-hover:text-[#af8d19] transition ease-in-out duration-500">
@@ -82,12 +82,12 @@ function ProjectReview({
               ))}
             </ul>
           </div>
-          <div className="px-10 sm:p-0 sm:w-[calc(50%-8px)] group aspect-[5/3] sm:aspect-[4/3] relative my-auto rounded-lg">
+          <div className="px-10 sm:p-0 sm:w-[calc(50%-8px)] group aspect-[5/3] sm:aspect-[5/3] relative my-auto rounded-xl flex items-center justify-center">
             <Image
               src={imageUrl}
               alt={alt}
-              className="object-cover aspect-[4/3] rounded-lg sm:group-hover:scale-105 transition ease-in-out duration-500"
-              style={{ filter: 'grayscale(100%) brightness(60%)' }}
+              className="object-cover aspect-[5/3] rounded-xl sm:group-hover:scale-105 transition ease-in-out duration-500"
+              style={{ filter: "grayscale(100%) brightness(70%)" }}
             />
           </div>
         </div>

@@ -1,6 +1,5 @@
 import adc from "../public/adc.png";
 import uog from "../public/uog.png";
-
 import w3s from "../public/w3s.png";
 import said from "../public/said.png";
 
@@ -8,19 +7,19 @@ export const experienceData = [
   {
     id: 1,
     position: "Software Engineer",
-    company: "Food From Thought",
+    company: "Food From Thought at UofG",
     date: " 2023 - Present",
     description:
       "Develop, maintain, and deploy the semantic engine a web plaform to compose schemas from a tabulater approach. Currently exploring ways to enhance core systems used at Food From Thought to achieve a suitable schema model.",
-    tags: ["React", "Typescript", "HTML/CSS", "Material UI", "Rust"],
+    tags: ["Rust", "TypeScript", "React", "Node", "Python", "Azure"],
     link: "https://foodfromthought.ca/",
     imageUrl: adc,
     alt: "ADC Logo",
   },
   {
     id: 2,
-    position: "Software Developer",
-    company: "University of Guelph | Water Resource Engineering",
+    position: "Geospatial Software Developer",
+    company: "University of Guelph (UofG)",
     date: "2022 - 2023",
     description:
       "Built a Data as a Service (DaaS) web platform that allows application users to download climate data of a pre-specified region within any watershed across the globe.",
@@ -56,4 +55,16 @@ export const projectsData = [
     achievement: "",
     hasAchievement: true,
   },
+  // {
+  //   title: "Veyo (Vehicle and Go)",
+  //   description:
+  //     "A designated drivers mobile app for individuals who like to be driven in their own cars.",
+  //   tags: ["React Native", "Stripe", "Clerk", "Neon DB", "Google Cloud APIs"],
+  //   imageUrl: veyo,
+  //   link: "https://www.uoguelph.ca/watershed/w3s/",
+  //   isLink: true,
+  //   alt: "W3S Project Image",
+  //   achievement: "",
+  //   hasAchievement: true,
+  // },
 ] as const;

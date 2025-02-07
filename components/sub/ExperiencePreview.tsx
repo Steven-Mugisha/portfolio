@@ -1,11 +1,11 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import { experienceData } from "../../lib/data";
 import Image from "next/image";
 
 type ExpProps = (typeof experienceData)[number];
 
-function ExperiencePreview({
+const ExperiencePreview = ({
   position,
   company,
   date,
@@ -14,7 +14,7 @@ function ExperiencePreview({
   link,
   imageUrl,
   alt,
-}: ExpProps) {
+}: ExpProps) => {
   const LinkSquare02Icon = (props: React.SVGProps<SVGSVGElement>) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -42,67 +42,50 @@ function ExperiencePreview({
     </svg>
   );
   return (
-    <>
-      <div className="sm:mb-8 work-content_container">
-        <a href={link} target={"_blank"} rel="noreferrer noopener">
-          <div className="rounded-xl transition ease-in-out flex flex-row group pt-4">
-            <Image
-              src={imageUrl}
-              alt={alt}
-              quality={100}
-              priority
-              className="ml-0 h-16 w-16 sm:h-[70px] sm:w-[70px] object-scale-down pt-2"
-            />
+    <div className="sm:mb-4 mb-4 p-4 sm:p-4 lg:p-8">
+      <a href={link} target={"_blank"} rel="noreferrer noopener">
+        <div className="rounded-xl transition ease-in-out flex flex-col sm:flex-row group p-4 sm:p-6 lg:p-8 hover:bg-[#b9b9ba1c]">
+          <Image
+            src={imageUrl}
+            alt={alt}
+            quality={100}
+            priority
+            className="h-16 w-16 sm:h-[70px] sm:w-[70px] lg:h-[90px] lg:w-[90px] object-scale-down"
+          />
 
-            <div className="pb-4 ml-4 pr-2 pt-2 flex flex-col group ">
-              <div className="text-xs font-bold sm:group-hover:text-[#af8d19]">
-                {date}
-              </div>
-              <div className="text-lg text-gray-200 font-semibold group">
-                <div className="sm:group-hover:text-[#af8d19] transition ease-in-out duration-500 text-balance">
-                  {position}
-                  <span>
-                    {/* <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        fill="currentColor"
-                                        className="inline h-4 w-4 ml-2 -mt-2 sm:group-hover:text-[#a3b4f6] transition ease-in-out duration-500 group-hover:shadow-md group-hover:translate-x-1 group-hover:-translate-y-0.5"
-                                        viewBox="0 0 16 16"
-                                    >
-                                        <path
-                                            fillRule="evenodd"
-                                            d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"
-                                        />
-                                        <path
-                                            fillRule="evenodd"
-                                            d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"
-                                        />
-                                    </svg> */}
-                    <LinkSquare02Icon className="inline h-4 w-4 ml-2 -mt-1 text-gray-200 sm:group-hover:text-[#af8d19] transition ease-in-out duration-500 group-hover:shadow-md group-hover:translate-x-1 group-hover:-translate-y-0.5" />
-                  </span>
-                </div>
-                <div className="font-normal text-base sm:group-hover:text-[#af8d19] transition ease-in-out duration-500">
-                  @ {company}
-                </div>
-              </div>
-              <div className="text-sm mt-2 text-gray-400 mr-5 group-hover:text-[#af8d19]">
-                {description}
-              </div>
-              <ul className="flex flex-wrap mt-4 gap-2">
-                {tags.map((tag, index) => (
-                  <li
-                    className="bg-[#b9b9ba]/15 px-3 py-1 text-[0.65rem] font-medium tracking-wider text-[#af8d19] rounded-md"
-                    key={index}
-                  >
-                    {tag}
-                  </li>
-                ))}
-              </ul>
+          <div className="flex flex-col ml-0 sm:ml-4 mt-4 sm:mt-0">
+            <div className="text-xs font-bold text-gray-400 sm:group-hover:text-[#af8d19]">
+              {date}
             </div>
+            <div className="text-lg text-gray-200 font-semibold">
+              <div className="sm:group-hover:text-[#af8d19] transition ease-in-out duration-500 text-balance">
+                {position}
+                <span>
+                  <LinkSquare02Icon className="inline h-4 w-4 ml-2 -mt-1 text-gray-200 sm:group-hover:text-[#af8d19] transition ease-in-out duration-500 sm:group-hover:shadow-md sm:group-hover:translate-x-1 sm:group-hover:-translate-y-0.5" />
+                </span>
+              </div>
+              <div className="font-normal text-base text-gray-400 sm:group-hover:text-[#af8d19] transition ease-in-out duration-500">
+                @ {company}
+              </div>
+            </div>
+            <div className="text-sm mt-2 text-gray-400 sm:group-hover:text-[#af8d19]">
+              {description}
+            </div>
+            <ul className="flex flex-wrap mt-4 gap-2">
+              {tags.map((tag, index) => (
+                <li
+                  className="bg-[#b9b9ba]/15 px-3 py-1 text-[0.75rem] font-medium tracking-wider text-[#af8d19] rounded-md"
+                  key={index}
+                >
+                  {tag}
+                </li>
+              ))}
+            </ul>
           </div>
-        </a>
-      </div>
-    </>
+        </div>
+      </a>
+    </div>
   );
-}
+};
 
 export default ExperiencePreview;

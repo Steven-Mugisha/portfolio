@@ -3,37 +3,46 @@
 import { useState, useEffect, useRef } from "react";
 
 const Mousefollow = () => {
-    const [point, setPoint] = useState({ x: 0, y: 0 });
-    const { x, y } = point;
-    const ref = useRef();
+  const [point, setPoint] = useState({ x: 0, y: 0 });
+  const { x, y } = point;
+  const ref = useRef();
+  const [isMobile, setIsMobile] = useState(false);
 
-    useEffect(() => {
-        if (!ref.current) return;
+  useEffect(() => {
+    if (!ref.current) return;
 
-        const handlePointerMove = ({ clientX, clientY }) => {
-            const element = ref.current;
+    const handlePointerMove = ({ clientX, clientY }) => {
+      const element = ref.current;
 
-            const x = clientX - element.offsetLeft - element.offsetWidth / 2;
-            const y = clientY - element.offsetTop - element.offsetHeight / 2;
-            setPoint({ x, y });
-        };
+      const x = clientX - element.offsetLeft - element.offsetWidth / 2;
+      const y = clientY - element.offsetTop - element.offsetHeight / 2;
+      setPoint({ x, y });
+    };
 
-        window.addEventListener("pointermove", handlePointerMove);
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
 
-        return () => {
-            window.removeEventListener("pointermove", handlePointerMove);
-        };
-    }, []);
+    window.addEventListener("pointermove", handlePointerMove);
 
-    return (
-        <div
-            ref={ref}
-            className="hidden mousefollow md:block"
-            style={{
-                transform: `translate(${x}px, ${y}px)`,
-            }}
-        ></div>
-    );
+    handleResize();
+
+    return () => {
+      window.removeEventListener("pointermove", handlePointerMove);
+    };
+  }, []);
+
+  return (
+    <div
+      ref={ref}
+      className={`hidden ${
+        isMobile ? "mousefollowmobile" : "mousefollow"
+      } md:block`}
+      style={{
+        transform: `translate(${x}px, ${y}px)`,
+      }}
+    ></div>
+  );
 };
 
 export default Mousefollow;

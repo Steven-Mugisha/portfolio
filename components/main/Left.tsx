@@ -33,8 +33,8 @@ const Left = () => {
   return (
     <div className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
       <div>
-        <div className="text-4xl sm:text-5xl font-bold tracking-tight text-gray-200">
-          Steven Mugisha
+        <div className="text-4xl sm:text-4xl font-bold tracking-tight text-gray-200">
+          Steven Mugisha Mizero
         </div>
         <a
           className="flex text-gray-400 group"
@@ -42,45 +42,27 @@ const Left = () => {
           target="_blank"
           rel="noreferrer noopener"
         >
-          <div className="font-medium tracking-tight text-gray-200 sm:text-xl text-nowrap mt-4 sm:group-hover:text-[#af8d19]">
+          <div className="font-medium tracking-tight text-gray-200 sm:text text-nowrap mt-4 sm:group-hover:text-[#af8d19]">
             Software Engineer @ Food From Thought
             <span className="">
-              {/* <svg
-                                className="h-4 w-4 ml-3 group-hover:translate-x-1 group-hover:-translate-y-0.5 transition duration-500 ease-in-out"
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="currentColor"
-                                viewBox="0 0 16 16"
-                            >
-                                <path
-                                    fillRule="evenodd"
-                                    d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"
-                                />
-                                <path
-                                    fillRule="evenodd"
-                                    d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"
-                                />
-                            </svg> */}
               <LinkSquare02Icon className="inline h-5 w-5 ml-2 -mt-1.5 group-hover:translate-x-1 group-hover:-translate-y-1 transition duration-500 ease-in-out text-gray-400 sm:group-hover:text-[#af8d19]" />
             </span>
           </div>
         </a>
 
         <div className="mt-4 max-w-xs leading-normal text-gray-200">
-          engineer & more
+          The stuff things are made for...
         </div>
         <div className="lg:mr-[70px] mt-4 md:mt-8 leading-relaxed">
           <div className="mb-4">
-            With a passion for building innovative products, I thrive on solving
-            complex problems and crafting seamless user experiences.
+            With a passion for building innovative software products, I thrive
+            on solving complex problems and crafting seamless user experiences.
           </div>
           <div className="mb-4">
-            Currently exploring the field of sports analytics and applying
-            ML/AI to transform the sporting industry, combining my passion for
-            data with cutting-edge technology.
+            If AI is here to stay, then I am here to make it better (GPT-4.0 et
+            al., 2023) 😀.
           </div>
-          <div>
-            Always looking for an opportunity to learn and grow.
-          </div>
+          <div>Always looking for an opportunity to learn and grow.</div>
         </div>
         <Nav />
       </div>
