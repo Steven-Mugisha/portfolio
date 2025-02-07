@@ -44,7 +44,7 @@ const ExperiencePreview = ({
   return (
     <div className="sm:mb-4 mb-4 p-4 sm:p-4 lg:p-8">
       <a href={link} target={"_blank"} rel="noreferrer noopener">
-        <div className="rounded-xl transition ease-in-out flex flex-col sm:flex-row group p-4 sm:p-6 lg:p-8 hover:bg-[#b9b9ba1c]">
+        <div className="-m-6 rounded-xl transition ease-in-out flex flex-col sm:flex-row group p-4 sm:p-6 lg:p-8 hover:bg-[#b9b9ba1c]">
           <Image
             src={imageUrl}
             alt={alt}

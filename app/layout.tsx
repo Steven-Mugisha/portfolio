@@ -23,7 +23,6 @@ export const metadata: Metadata = {
     "GIS Analyst",
   ],
   authors: [{ name: "Steven Mugisha Mizero" }],
-  viewport: "width=device-width, initial-scale=1.0",
   robots: "index, follow",
   openGraph: {
     title: "Steven Mugisha Mizero - Software Engineer Portfolio",
@@ -38,6 +37,8 @@ export const metadata: Metadata = {
     ],
   },
 };
+
+export const viewport = "width=device-width, initial-scale=1";
 
 export default function RootLayout({
   children,
