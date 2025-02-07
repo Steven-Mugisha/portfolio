@@ -32,7 +32,7 @@ const Projects = () => {
 
   return (
     <div className="justify-items-center">
-      <p className="text-gray-200 font-bold mb-4 item-center">EXPERIENCE</p>
+      <p className="text-gray-200 font-bold item-center">EXPERIENCE</p>
       <div>
         {experienceData.map((experience) => (
           <>{<ExperiencePreview {...experience} />}</>

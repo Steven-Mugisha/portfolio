@@ -51,7 +51,7 @@ const Left = () => {
         </a>
 
         <div className="mt-4 max-w-xs leading-normal text-gray-200">
-          The stuff things are made for...
+          Engineering & Beyond
         </div>
         <div className="lg:mr-[70px] mt-4 md:mt-8 leading-relaxed">
           <div className="mb-4">

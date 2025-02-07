@@ -34,8 +34,8 @@ export const projectsData = [
   {
     title: "SAIDIFY",
     description:
-      "Helped to build an NPM library to generate SAIDs—a cryptographic digest of a given set of data that is embedded within the data it summarizes",
-    tags: ["Typescript", "Node.js", "NPM"],
+      "Contributed to an open source NPM package that generates SAID: a cryptographic digest of a data model and embedded inside the data model it hashes.",
+    tags: ["KERI", "Typescript", "Node.js"],
     imageUrl: said,
     link: "https://www.npmjs.com/package/saidify",
     isLink: true,
@@ -52,7 +52,7 @@ export const projectsData = [
     link: "https://www.uoguelph.ca/watershed/w3s/",
     isLink: true,
     alt: "W3S Project Image",
-    achievement: "",
+    achievement: "Achieved over 25,000 data downloads since 2021",
     hasAchievement: true,
   },
   // {
