@@ -55,8 +55,8 @@ const Left = () => {
         </div>
         <div className="lg:mr-[70px] mt-4 md:mt-8 leading-relaxed">
           <div className="mb-4">
-            With a passion for building innovative software products, I thrive
-            on solving complex problems and crafting seamless user experiences.
+            I turn complex problems into elegant software solutions, building
+            intuitive experiences that drive real impact.
           </div>
           <div className="mb-4">
             If AI is here to stay, then I am here to make it better (GPT-4.0 et

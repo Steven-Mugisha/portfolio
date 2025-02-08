@@ -10,7 +10,7 @@ export const experienceData = [
     company: "Food From Thought at UofG",
     date: " 2023 - Present",
     description:
-      "Develop, maintain, and deploy the semantic engine a web plaform to compose schemas from a tabulater approach. Currently exploring ways to enhance core systems used at Food From Thought to achieve a suitable schema model.",
+      "Develop, maintain, and deploy the Semantic Engine - a web plaform to compose schemas from a tabular approach. Currently exploring ways to enhance core systems used at Food From Thought to achieve a suitable schema model.",
     tags: ["Rust", "TypeScript", "React", "Node", "Python", "Azure"],
     link: "https://foodfromthought.ca/",
     imageUrl: adc,
@@ -34,7 +34,7 @@ export const projectsData = [
   {
     title: "SAIDIFY",
     description:
-      "Contributed to an open source NPM package that generates SAID: a cryptographic digest of a data model and embedded inside the data model it hashes.",
+      "Contributed to an open source NPM package that generates SAID - a cryptographic digest of a data model and embedded inside the data model it hashes.",
     tags: ["KERI", "Typescript", "Node.js"],
     imageUrl: said,
     link: "https://www.npmjs.com/package/saidify",
