@@ -5,17 +5,13 @@ date: "2024"
 keywords: ["CESR", "SAID", "Rust"]
 ---
 
-<br>
-
-A **said** (Self-Addressing Identifier) - a special type of content-addressable identifier based on encoded cryptographic digest that is self-referential.
-
 - SAIDs facilitates immutably referenced data serialization for applications such as [Verifiable Credentials](https://en.wikipedia.org/wiki/Verifiable_credentials) or [Ricardian Contracts](https://en.wikipedia.org/wiki/Ricardian_contract).
 
 ### **said** [Generation and Verification Protocols](https://www.ietf.org/archive/id/draft-ssmith-said-03.html#section-2.3)
 
 ---
 
-- **said** are encoded with CESR (Composable Event Stream Representation) [CESR](https://datatracker.ietf.org/doc/draft-ssmith-cesr/) which includes cryptographic algorithms used to generate the digest.
+- **said** is encoded with CESR (Composable Event Stream Representation) [CESR](https://datatracker.ietf.org/doc/draft-ssmith-cesr/) which includes cryptographic algorithms used to generate the digest.
 
 ### A simple example of a **said** generation:
 
@@ -118,7 +114,7 @@ The below section summarizes the work done by HCF to compute **said**. The empha
 
 In summary when a user writes an **oca file** instructions such as **add** , **remove** or **from** they dictate what the **oca ast** represents. From the above picture only one attribute **test** is added. **oca-bundle** builds from the generated **oca ast** putting the AST parts together to form a defined overlay is there is. In the example only the **capture_base** is built. Each overlay same as the capture base are structs that implements **SAD** macro that will be discussed in the next sections. After the digest is computed for an overlay the **capture base** **said** is added to it and the digest of the whole bundle is the computed on top and inserted.
 
-The following highlights a high level description of what you achieve with crates developed b the HCF to calculate the digest.
+The following highlights a high level description of what you achieve with crates developed by the HCF to calculate the digest.
 
 The following example shows a digest calculated for the string literal **hello there**.
 
@@ -392,7 +388,7 @@ The first part of the function includes the following:
 - Grabs the name field the **struct** e.g **FirstStruct** and formats it and stores it under **varname**.
 - **let (impl_generics, ty_generics, where_clause) = generics.split_for_impl()** this lines gets the fields to manipulate in case the **struct** incudes generic types. To read more about generics in Rust click [here](https://doc.rust-lang.org/book/ch10-00-generics.html)
 - It is important to note that the **attrs** field under the **DeriveInput** AST includes other annotations if any provided by the **struct** (i.e., other traits that the **struct** implements). Thus if a struct is annotated with **#[version(protocol = "KERI", major = 1, minor = 0)]**, [**parse_version_args**](https://github.com/Steven-Mugisha/cesrox/blob/master/said/sad_macros/src/version.rs) function is used to return a well formatted version of the fields.
-- The **data* field in **DeriveInput** AST contains all the fields defined in the a crate. Fields here are referred to as **structs** but they could also be &&enum**` that is why the code panic if no struct if found in the whole crate.
+- The **data\* field in **DeriveInput** AST contains all the fields defined in the a crate. Fields here are referred to as **structs** but they could also be &&enum**` that is why the code panic if no struct if found in the whole crate.
   - The code snippet above uses a match statement to find all the structs and map the fields into **TransField** defined [here](https://github.com/Steven-Mugisha/cesrox/blob/master/said/sad_macros/src/field.rs) . In short the function **from_ast** of **TransField** struct inputs a type of **syn::Field** (which is part of the **DeriveInput**) as input and returns a transformed **TransField** struct. In other words, each struct is transformed to match the logic defined in the **TransField** implementation.
 
 Part II:
